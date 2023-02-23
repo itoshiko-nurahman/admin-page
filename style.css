@@ -124,6 +124,8 @@ header {
   background-color: white;
   border-radius: 25px;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
 .content-myrep h1 {
@@ -137,12 +139,7 @@ header {
   color: var(--color-text-gray);
 }
 
-.calculator {
-  display: flex;
-  flex-direction: row;
-}
-
-.calculator img {
+.content-myrep img {
   height: 200px;
   width: 300px;
   object-fit: cover;
@@ -150,6 +147,10 @@ header {
 
 .content-myrep .desc {
   padding: 20px;
+}
+
+.img-item-container {
+  height: 200px;
 }
 
 .popular {
@@ -165,39 +166,48 @@ header {
 .container-recent {
   background-color: white;
   border-radius: 10px;
+  padding: 15px;
+  align-items: center;
 }
 
 .content-recent {
-  width: 160px;
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
-.content-recent > h6 {
+.content-recent h6 {
   margin: 0;
   padding: 0;
 }
 
-.content-recent > p {
+.content-recent p {
   display: inline;
   word-wrap: break-word;
   font-size: 0.5rem;
   color: var(--color-text-gray);
+  margin: 0;
+}
+
+.recent-item-desc {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-myrep .open-icon {
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
   padding: 5px;
-  filter: invert(40%) sepia(73%) saturate(5085%) hue-rotate(180deg) brightness(95%) contrast(98%);
+  filter: invert(40%) sepia(73%) saturate(5085%) hue-rotate(180deg)
+    brightness(95%) contrast(98%);
 }
 
 .icons-container {
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 400px;
-  margin-top: 50px;
-  border-radius: 10px;
-  border: 2px solid var(--color-blue);
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  margin-top: 40px;
 }
 
 a {
