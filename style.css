@@ -36,6 +36,97 @@ h1 {
 
 header {
   background-color: white;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-template-rows: 4fr 6fr;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
+  /* justify-items: center; */
+  padding: 0 50px;
+}
+
+.search > img {
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  padding-left: calc(calc(66.92px / 2) - 12px);
+}
+
+.search > input {
+  border: none;
+  height: 30px;
+  border-radius: 20px;
+  background-color: var(--color-gray);
+}
+
+.profile-icon {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) 6fr;
+  padding: 0 80px;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+.profile-icon > img {
+  width: 24px;
+}
+
+.profile-icon > h1 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  padding: 0 50px;
+  column-gap: 10px;
+}
+
+.profile > h1, .profile > p {
+  margin: 0;
+  padding: 0;
+}
+
+.profile > img {
+  width: 56px;
+  border-radius: 100%;
+  grid-area: 1 / 1 / 3 / 2;
+  padding-left: calc(calc(66.92px / 2) - calc(56px / 2));
+}
+
+.profile > p {
+  font-weight: bolder;
+  padding-top: calc(45px - 19px);
+  font-size: 0.7rem;
+}
+
+.profile > h1 {
+  padding-bottom: calc(45px - 29px);
+}
+
+.button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.button > button {
+  color: white;
+  font-weight: bolder;
+  border: none;
+  background-color: var(--color-blue);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
 }
 
 .sidebar {
@@ -161,31 +252,39 @@ header {
 
 .recent {
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-recent {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  align-items: flex-start;
   background-color: white;
   border-radius: 10px;
   padding: 15px;
-  align-items: center;
 }
 
 .content-recent {
   display: flex;
   flex-direction: row;
+  flex: 1 1 0;
+  align-items: center;
 }
 
 .content-recent h6 {
   margin: 0;
   padding: 0;
+  font-size: 0.8rem;
 }
 
 .content-recent p {
   display: inline;
   word-wrap: break-word;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   color: var(--color-text-gray);
-  margin: 0;
+  margin-top: 5px;
 }
 
 .recent-item-desc {
@@ -213,4 +312,11 @@ header {
 a {
   text-decoration: none;
   height: 34px;
+}
+
+.divider {
+  border: 1px solid var(--color-gray);
+  opacity: 0.6;
+  border-radius: 10px;
+  width: 130px;
 }
